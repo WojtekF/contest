@@ -26,6 +26,16 @@ npm run test
 
 from command line in root folder.
 
+## Linting
+
+To run linter please run 
+
+```
+npm run tslint
+```
+
+from command line in root folder.
+
 ## Code coverage
 
 To run code coverage please run 
