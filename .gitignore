@@ -1,0 +1,5 @@
+.nyc_output
+.vscode
+dist/**/bundle*
+coverage
+node_modules

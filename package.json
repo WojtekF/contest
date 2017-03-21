@@ -1,0 +1,71 @@
+{
+  "name": "contest",
+  "version": "1.0.0",
+  "description": "Sofomo contest app",
+  "main": "index.js",
+  "scripts": {
+    "tslint": "tslint -c tslint.json '.\\source\\**\\*.tsx' -t verbose",
+    "single-tslint": "tslint -c tslint.json -t verbose",
+    "test": "mocha --compilers tsx:ts-node/register --require .\\source\\__tests__\\setup.js  .\\source\\__tests__\\**\\*.test.tsx",
+    "cover": "nyc npm run test"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "mocha",
+    "contest"
+  ],
+  "nyc": {
+    "include": [
+      "source/**/*.tsx"
+    ],
+    "exclude": [
+      "source/__tests__/",
+      "source/components/index.tsx"
+    ],
+    "extension": [
+      ".tsx"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "json",
+      "html"
+    ],
+    "all": true
+  },
+  "author": "WF",
+  "license": "ISC",
+  "dependencies": {
+    "material-ui": "^0.17.1",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.3",
+    "react-tap-event-plugin": "^2.0.1",
+    "redux": "^3.6.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^3.4.35",
+    "@types/es6-shim": "^0.31.32",
+    "@types/mocha": "^2.2.40",
+    "@types/react": "^15.0.16",
+    "@types/redux": "^3.6.0",
+    "@types/redux-thunk": "^2.1.0",
+    "@types/sinon": "^1.16.35",
+    "chai": "^3.5.0",
+    "enzyme": "^2.7.1",
+    "jsdom": "^9.12.0",
+    "mocha": "^3.2.0",
+    "nyc": "^10.1.2",
+    "react-addons-test-utils": "^15.4.2",
+    "sinon": "^2.1.0",
+    "source-map-loader": "^0.2.0",
+    "ts-loader": "^2.0.2",
+    "ts-node": "^2.1.0",
+    "tslint": "^4.5.1",
+    "tslint-react": "^2.5.0",
+    "typescript": "^2.2.1",
+    "webpack": "^2.2.1"
+  }
+}
